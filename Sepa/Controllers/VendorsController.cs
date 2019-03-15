@@ -19,6 +19,8 @@ namespace Sepa.Controllers
         public ActionResult Index()
         {
             return View(db.Vendors.ToList());
+
+           
         }
 
         // GET: Vendors/Details/5
