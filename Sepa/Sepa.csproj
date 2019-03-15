@@ -154,6 +154,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="DAL\SepaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,7 +163,28 @@
     <Compile Include="Migrations\201903112121132_InitialModel.Designer.cs">
       <DependentUpon>201903112121132_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903121952142_CreateInvoiceClass.cs" />
+    <Compile Include="Migrations\201903121952142_CreateInvoiceClass.Designer.cs">
+      <DependentUpon>201903121952142_CreateInvoiceClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903131915410_UpdateModelToLinkVendorToInvoiceClass.cs" />
+    <Compile Include="Migrations\201903131915410_UpdateModelToLinkVendorToInvoiceClass.Designer.cs">
+      <DependentUpon>201903131915410_UpdateModelToLinkVendorToInvoiceClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903151126136_UpdateModelToLinkVendorToInvoiceClass1.cs" />
+    <Compile Include="Migrations\201903151126136_UpdateModelToLinkVendorToInvoiceClass1.Designer.cs">
+      <DependentUpon>201903151126136_UpdateModelToLinkVendorToInvoiceClass1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903151237433_RemoveRequiredFieldsVendorModel.cs" />
+    <Compile Include="Migrations\201903151237433_RemoveRequiredFieldsVendorModel.Designer.cs">
+      <DependentUpon>201903151237433_RemoveRequiredFieldsVendorModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.cs" />
+    <Compile Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.Designer.cs">
+      <DependentUpon>201903151356379_CountryandCurrencytoStringVendorClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -205,6 +227,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Vendors\Create.cshtml" />
+    <Content Include="Views\Vendors\Delete.cshtml" />
+    <Content Include="Views\Vendors\Details.cshtml" />
+    <Content Include="Views\Vendors\Edit.cshtml" />
+    <Content Include="Views\Vendors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -225,6 +252,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201903112121132_InitialModel.resx">
       <DependentUpon>201903112121132_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903121952142_CreateInvoiceClass.resx">
+      <DependentUpon>201903121952142_CreateInvoiceClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903131915410_UpdateModelToLinkVendorToInvoiceClass.resx">
+      <DependentUpon>201903131915410_UpdateModelToLinkVendorToInvoiceClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903151126136_UpdateModelToLinkVendorToInvoiceClass1.resx">
+      <DependentUpon>201903151126136_UpdateModelToLinkVendorToInvoiceClass1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903151237433_RemoveRequiredFieldsVendorModel.resx">
+      <DependentUpon>201903151237433_RemoveRequiredFieldsVendorModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.resx">
+      <DependentUpon>201903151356379_CountryandCurrencytoStringVendorClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

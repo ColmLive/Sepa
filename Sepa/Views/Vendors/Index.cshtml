@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Sepa.Models.Vendor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Currency)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vendor_Phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Currency)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor_Phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Vendor_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Vendor_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Vendor_ID })
+        </td>
+    </tr>
+}
+
+</table>

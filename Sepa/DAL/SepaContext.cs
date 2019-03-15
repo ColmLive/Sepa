@@ -17,6 +17,7 @@ namespace Sepa.DAL
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
        public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
 
         public SepaContext() : base("name=SepaContext")
         {
