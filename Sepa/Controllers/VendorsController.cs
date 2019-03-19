@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Sepa.DAL;
 using Sepa.Models;
+using System.Xml.Linq;
 
 namespace Sepa.Controllers
 {
@@ -39,6 +40,8 @@ namespace Sepa.Controllers
         }
 
         // GET: Vendors/Create
+        /* Remove Create Option - CJC - 19/03/2019
+        //////////////////////////////////////////
         public ActionResult Create()
         {
             return View();
@@ -60,7 +63,8 @@ namespace Sepa.Controllers
 
             return View(vendor);
         }
-
+        ///////////////////////////////////////
+        ///*/
         // GET: Vendors/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -79,6 +83,8 @@ namespace Sepa.Controllers
         // POST: Vendors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        /* Remove POST Option - CJC - 19/03/2019
+        //////////////////////////////////////////
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Vendor_ID,Vendor_Name,Vendor_Address,Vendor_Address2,Vendor_City,Vendor_Country,Vendor_Currency,Vendor_Email,Vendor_Phone")] Vendor vendor)
@@ -91,7 +97,10 @@ namespace Sepa.Controllers
             }
             return View(vendor);
         }
-
+        ////////////////////////////////////////////
+        */
+        /* Remove Delete Option - CJC - 19/03/2019
+        //////////////////////////////////////////
         // GET: Vendors/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -117,7 +126,8 @@ namespace Sepa.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        /////////////////////////////
+        ///*/
         protected override void Dispose(bool disposing)
         {
             if (disposing)

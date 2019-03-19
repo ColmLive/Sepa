@@ -6,6 +6,9 @@ namespace Sepa.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
     using Sepa.Models;
+    
+   
+
 
     internal sealed class Configuration : DbMigrationsConfiguration<Sepa.DAL.SepaContext>
     {
@@ -26,7 +29,10 @@ namespace Sepa.Migrations
  //               new Models.Vendor { Vendor_ID = 2, Vendor_Name = "Vendor 2" , Vendor_Address = "Add3", Vendor_Address2 = "Add4", Vendor_City = "London", Vendor_Country = "UK", Vendor_Currency = "STG", Vendor_Email = "v2@test.com", Vendor_Phone = "004412315555" },
  //               new Models.Vendor { Vendor_ID = 3, Vendor_Name = "Vendor 3" , Vendor_Address = "Add5", Vendor_Address2 = "Add6", Vendor_City = "New York", Vendor_Country = "USA", Vendor_Currency = "USD/PL", Vendor_Email = "v3@test.com", Vendor_Phone = "0015552316666" },
             };    
+            
+           
            vendor.ForEach(s => context.Vendors.Add(s));
+        
             context.SaveChanges();
         }
     }
