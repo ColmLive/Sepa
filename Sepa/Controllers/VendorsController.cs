@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using Sepa.DAL;
 using Sepa.Models;
 using System.Xml.Linq;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Sepa.Controllers
 {
@@ -77,6 +79,7 @@ namespace Sepa.Controllers
             {
                 return HttpNotFound();
             }
+            
             return View(vendor);
         }
 
