@@ -154,6 +154,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvoicesController.cs" />
+    <Compile Include="Controllers\InvoiceUpdateController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Controllers\VendorUpdateController.cs" />
     <Compile Include="DAL\SepaContext.cs" />
@@ -183,6 +185,10 @@
     <Compile Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.cs" />
     <Compile Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.Designer.cs">
       <DependentUpon>201903151356379_CountryandCurrencytoStringVendorClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903240802540_SetCurrencyCodeToStringonInvoiceClass.cs" />
+    <Compile Include="Migrations\201903240802540_SetCurrencyCodeToStringonInvoiceClass.Designer.cs">
+      <DependentUpon>201903240802540_SetCurrencyCodeToStringonInvoiceClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -234,6 +240,12 @@
     <Content Include="Views\Vendors\Edit.cshtml" />
     <Content Include="Views\Vendors\Index.cshtml" />
     <Content Include="Views\VendorUpdate\Index.cshtml" />
+    <Content Include="Views\Invoices\Create.cshtml" />
+    <Content Include="Views\Invoices\Delete.cshtml" />
+    <Content Include="Views\Invoices\Details.cshtml" />
+    <Content Include="Views\Invoices\Edit.cshtml" />
+    <Content Include="Views\Invoices\Index.cshtml" />
+    <Content Include="Views\InvoiceUpdate\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -269,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903151356379_CountryandCurrencytoStringVendorClass.resx">
       <DependentUpon>201903151356379_CountryandCurrencytoStringVendorClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903240802540_SetCurrencyCodeToStringonInvoiceClass.resx">
+      <DependentUpon>201903240802540_SetCurrencyCodeToStringonInvoiceClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

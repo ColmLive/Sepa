@@ -15,7 +15,7 @@ namespace Sepa.Models
         //[Required(ErrorMessage = "Please enter ID")]
         [Key]
         public int Invoice_ID { get; set; }
-        public Currency Currency_Code { get; set; }
+        public string Currency_Code { get; set; }
         public double Discount { get; set; }
         public DateTime? Due_Date { get; set; }
         public DateTime? Posting_Date { get; set; }
