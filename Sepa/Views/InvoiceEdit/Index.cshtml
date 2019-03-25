@@ -1,0 +1,76 @@
+﻿
+@model List<Sepa.Models.Invoice>
+
+@{
+
+	ViewBag.Title = "Index";
+
+}
+
+
+
+<h2>Invoice List</h2>
+
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+
+{
+
+	<table class="table">
+
+		@for (int i = 0; i < Model.Count; i++)
+
+		{
+			<tr>
+
+				<td>
+					@Html.Hidden("Invoices.Index", (@i + 10))
+					@Html.TextBox("Invoices[" + @i + "].Invoice_ID",
+					Model[i].Invoice_ID, new {@readonly="readonly"})
+
+				</td>
+
+				<td>
+
+					@Html.TextBox("Invoices[" + @i + "].Posting_Date",
+
+					Model[i].Posting_Date)
+
+				</td>
+
+				<td>
+
+					@Html.TextBox("Invoices[" + @i + "].Posting_Desc",
+
+					Model[i].Posting_Desc)
+
+				</td>
+
+				<td>
+
+					@Html.TextBox("Invoices[" + @i + "].StatusCode",
+
+					Model[i].StatusCode)
+
+				</td>
+
+			</tr>
+
+		}
+
+
+
+		<tr>
+
+			<td colspan="4">
+
+				<input type="submit" value="Submit" />
+
+			</td>
+
+		</tr>
+
+	</table>
+
+}
