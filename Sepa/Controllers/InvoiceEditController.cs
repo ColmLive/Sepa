@@ -17,19 +17,20 @@ namespace Sepa.Controllers
     {
         private SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
-        public ActionResult Index()
-        {
-        
-        var data = from item in db.Invoices
+             public ActionResult Index()
+              {
 
-        where item.Invoice_ID < 10953
-        orderby item.Invoice_ID
+              var data = from item in db.Invoices
 
-        select item;
+              where item.Invoice_ID < 10953
+              orderby item.Vendor_ID,item.Invoice_ID
 
-        return View(data.ToList());
-        }
+              select item;
 
+              return View(data.ToList());
+              }
+
+         
         [HttpPost]
 
         public ActionResult Index(List<Invoice> invoices)
@@ -40,17 +41,19 @@ namespace Sepa.Controllers
 
             {
 
-                Invoice Existed_Inv = db.Invoices.Find(inv.Invoice_ID);
+                Invoice invoice = db.Invoices.Find(inv.Invoice_ID);
+                                                          
+                invoice.Posting_Date = inv.Posting_Date;
 
-                Existed_Inv.Posting_Date = inv.Posting_Date;
+                invoice.Posting_Desc = inv.Posting_Desc;
 
-                Existed_Inv.Posting_Desc = inv.Posting_Desc;
-
-                Existed_Inv.StatusCode = inv.StatusCode;
-
+                invoice.StatusCode = inv.StatusCode;
+                
+                
             }
 
             db.SaveChanges();
+
             //return RedirectToAction("Index");
             return View();
 
