@@ -15,7 +15,7 @@ namespace Sepa.Controllers
 {
     public class InvoiceEditController : Controller
     {
-        private SepaContext db = new SepaContext();
+        public SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
              public ActionResult Index()
               {
@@ -36,9 +36,7 @@ namespace Sepa.Controllers
         public ActionResult Index(List<Invoice> invoices)
 
         {
-     
-            foreach (Invoice inv in invoices)
-
+                 foreach (Invoice inv in invoices)
             {
 
                 Invoice invoice = db.Invoices.Find(inv.Invoice_ID);

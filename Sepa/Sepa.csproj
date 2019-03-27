@@ -191,6 +191,10 @@
     <Compile Include="Migrations\201903240802540_SetCurrencyCodeToStringonInvoiceClass.Designer.cs">
       <DependentUpon>201903240802540_SetCurrencyCodeToStringonInvoiceClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903271348022_SetStatusCodeToStringonInvoiceClass.cs" />
+    <Compile Include="Migrations\201903271348022_SetStatusCodeToStringonInvoiceClass.Designer.cs">
+      <DependentUpon>201903271348022_SetStatusCodeToStringonInvoiceClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
@@ -286,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903240802540_SetCurrencyCodeToStringonInvoiceClass.resx">
       <DependentUpon>201903240802540_SetCurrencyCodeToStringonInvoiceClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903271348022_SetStatusCodeToStringonInvoiceClass.resx">
+      <DependentUpon>201903271348022_SetStatusCodeToStringonInvoiceClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
