@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
-using System.Net;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Xml.Serialization;
-using System.IO;
 using Sepa.DAL;
 using Sepa.Models;
 
@@ -46,8 +40,7 @@ namespace Sepa.Controllers
                 invoice.Posting_Desc = inv.Posting_Desc;
 
                 invoice.StatusCode = inv.StatusCode;
-                
-                
+
             }
 
             db.SaveChanges();
