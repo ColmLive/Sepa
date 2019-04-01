@@ -16,7 +16,7 @@ namespace Sepa.Controllers
 
               var data = from item in db.Invoices
 
-              where item.Invoice_ID < 10953
+              where item.Invoice_ID < 10625
               orderby item.Vendor_ID,item.Invoice_ID
 
               select item;
@@ -30,19 +30,21 @@ namespace Sepa.Controllers
         public ActionResult Index(List<Invoice> invoices)
 
         {
-                 foreach (Invoice inv in invoices)
+
+
+            foreach (Invoice inv in invoices)
             {
 
                 Invoice invoice = db.Invoices.Find(inv.Invoice_ID);
-                                                          
+
                 invoice.Posting_Date = inv.Posting_Date;
 
                 invoice.Posting_Desc = inv.Posting_Desc;
 
                 invoice.StatusCode = inv.StatusCode;
 
-            }
-
+               
+            } 
             db.SaveChanges();
 
             //return RedirectToAction("Index");

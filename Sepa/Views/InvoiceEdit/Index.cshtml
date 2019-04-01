@@ -20,7 +20,7 @@
 		{
 			<tr>
 				<td>
-					@Html.Hidden("Invoices.Index", (@i + 10))
+					@Html.Hidden("Invoices.Index", (@i))
 					@Html.TextBox("Invoices[" + @i + "].Invoice_ID",
 					Model[i].Invoice_ID, new {@readonly="readonly"})
 				</td>
