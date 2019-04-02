@@ -9,72 +9,79 @@
 <div>
     <h4>Invoice</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Vendors.Vendor_Name)
-        </dt>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Vendors.Vendor_Name)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Vendors.Vendor_Name)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Vendors.Vendor_Name)
+		</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Currency_Code)
-        </dt>
+		<dt>
+			@Html.DisplayNameFor(model => model.Invoice_ID)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Currency_Code)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Invoice_ID)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Currency_Code)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Discount)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Currency_Code)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Discount)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Discount)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Due_Date)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Discount)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Due_Date)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Due_Date)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Posting_Date)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Due_Date)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Posting_Date)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Posting_Date)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Posting_Desc)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Posting_Date)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Posting_Desc)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Posting_Desc)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.StatusCode)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Posting_Desc)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.StatusCode)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.StatusCode)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Vendor_InvNo)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.StatusCode)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Vendor_InvNo)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Vendor_InvNo)
+		</dt>
 
-    </dl>
+		<dd>
+			@Html.DisplayFor(model => model.Vendor_InvNo)
+		</dd>
+
+	</dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Invoice_ID }) |

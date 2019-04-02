@@ -20,10 +20,6 @@ namespace Sepa.Controllers
                        group b by b.Vendor_ID into g
                        select new Group<string, Invoice> { Key = g.Key.ToString(), Values = g };
 
-                       
-
-                       
-
             return View(data.ToList());
         }
 

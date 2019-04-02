@@ -15,9 +15,11 @@
             @Html.DisplayNameFor(model => model.Vendors.Vendor_Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Currency_Code)
+            @Html.DisplayNameFor(model => model.Invoice_ID)
         </th>
-        <th>
+		<th>
+			@Html.DisplayNameFor(model => model.Currency_Code)
+		</th>       <th>
             @Html.DisplayNameFor(model => model.Discount)
         </th>
         <th>
@@ -39,37 +41,40 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Vendors.Vendor_Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Currency_Code)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Due_Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Posting_Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Posting_Desc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StatusCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Vendor_InvNo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Invoice_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Invoice_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Invoice_ID })
-        </td>
-    </tr>
+	<tr>
+		<td>
+			@Html.DisplayFor(modelItem => item.Vendors.Vendor_Name)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Invoice_ID)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Currency_Code)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Discount)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Due_Date)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Posting_Date)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Posting_Desc)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.StatusCode)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => item.Vendor_InvNo)
+		</td>
+		<td>
+			@Html.ActionLink("Edit", "Edit", new { id = item.Invoice_ID }) |
+			@Html.ActionLink("Details", "Details", new { id = item.Invoice_ID }) |
+			@Html.ActionLink("Delete", "Delete", new { id = item.Invoice_ID })
+		</td>
+	</tr>
 }
 
 </table>

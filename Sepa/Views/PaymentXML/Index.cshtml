@@ -4,11 +4,17 @@
 @{
 	ViewBag.Title = "LINQ Grouping";
 }
-
+<ul class="pagination">
+	<li><a href="#">1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">4</a></li>
+	<li><a href="#">5</a></li>
+</ul>
 <h2>Grouping Invoices by Vendor</h2>
 
 <table>
-	<thead><tr><th>Vendor </th><th>Invoice</th><th>Status Code</th><th>Description</th></tr></thead>
+	<thead><tr><th>Vendor&nbsp;&nbsp;</th><th>Name&nbsp;&nbsp;</th><th>Invoice&nbsp;&nbsp;</th><th>Status Code&nbsp;&nbsp;</th><th>Description&nbsp;&nbsp;</th></tr></thead>
 	<tbody>
 		@foreach (var group in Model)
 		{
@@ -19,10 +25,11 @@
 			foreach (var data in group.Values)
 			{
 		<tr>
-		<td>@data.Vendor_ID</td>
-		<td>@data.Invoice_ID</td>
-		<td>@data.StatusCode</td>
-		<td>@data.Posting_Desc</td>
+			<td>@data.Vendor_ID   </td>
+			<td>@data.Vendors.Vendor_Name   </td>
+			<td>@data.Invoice_ID   </td>
+			<td>@data.StatusCode   </td>
+			<td>@data.Posting_Desc   </td>
 		</tr>
 			}
 		}
