@@ -197,6 +197,7 @@
       <DependentUpon>201903271348022_SetStatusCodeToStringonInvoiceClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

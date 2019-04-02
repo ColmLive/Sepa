@@ -1,15 +1,30 @@
-﻿
+﻿@using Sepa.Models
+@model List<Group<string, Invoice>>
+
 @{
-	ViewBag.Title = "Index";
+	ViewBag.Title = "LINQ Grouping";
 }
 
-<h2>Index</h2>
+<h2>Grouping Invoices by Vendor</h2>
 
-<p>
-	<h2>XML Upload Completed</h2>
+<table>
+	<thead><tr><th>Vendor </th><th>Invoice</th><th>Status Code</th><th>Description</th></tr></thead>
+	<tbody>
+		@foreach (var group in Model)
+		{
+		<tr>
+		<th colspan="3">@group.Key</th>
+		</tr>
 
-</p>
-
-
-
-
+			foreach (var data in group.Values)
+			{
+		<tr>
+		<td>@data.Vendor_ID</td>
+		<td>@data.Invoice_ID</td>
+		<td>@data.StatusCode</td>
+		<td>@data.Posting_Desc</td>
+		</tr>
+			}
+		}
+	</tbody>
+</table>

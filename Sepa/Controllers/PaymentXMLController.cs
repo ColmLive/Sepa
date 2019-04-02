@@ -16,13 +16,11 @@ namespace Sepa.Controllers
         public ActionResult Index()
         {
 
-            var data = from item in db.Invoices
-                       group item by item.Vendor_ID into PaymentXML
-                       select new {
-                          VendorID = PaymentXML.Key,
-                          VendorAmount = PaymentXML.Sum(s=>s.Vendor_ID)
+            var data = from b in db.Invoices
+                       group b by b.Vendor_ID into g
+                       select new Group<string, Invoice> { Key = g.Key.ToString(), Values = g };
 
-                       };
+                       
 
                        
 
