@@ -156,6 +156,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InvoiceEditController.cs" />
     <Compile Include="Controllers\InvoicesController.cs" />
+    <Compile Include="Controllers\InvoiceSearchController.cs" />
     <Compile Include="Controllers\InvoiceUpdateController.cs" />
     <Compile Include="Controllers\PaymentXMLController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
@@ -255,6 +256,7 @@
     <Content Include="Views\InvoiceUpdate\Index.cshtml" />
     <Content Include="Views\InvoiceEdit\Index.cshtml" />
     <Content Include="Views\PaymentXML\Index.cshtml" />
+    <Content Include="Views\InvoiceSearch\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

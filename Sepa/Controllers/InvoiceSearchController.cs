@@ -7,11 +7,12 @@ using Sepa.Models;
 
 namespace Sepa.Controllers
 {
-    public class InvoiceEditController : Controller
+    public class InvoiceSearchController : Controller
     {
         public SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(string searchBy, string search)
         {
 
             var data = from item in db.Invoices
@@ -23,7 +24,19 @@ namespace Sepa.Controllers
 
             return View(data.ToList());
         }
+              /*
+            if (searchBy == "Status")
 
+            {
+                //   return View(db.Invoices.Where(x => x.StatusCode = search)).ToList());
+            }
+            else
+            {
+                //return View(db.Invoices.Where(x => x.Vendors.Vendor_Name.StartsWith(search).ToList());
+            }
+            return View();
+        }
+        */
 
         [HttpPost]
 
