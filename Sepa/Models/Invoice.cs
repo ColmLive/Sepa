@@ -7,7 +7,8 @@ using System.Web;
 
 namespace Sepa.Models
 {
-        public class Invoice
+    [Serializable]
+    public class Invoice
     {
 
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]

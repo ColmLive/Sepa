@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Xml.Serialization;
 using System.IO;
 using Sepa.DAL;
+using System.Xml;
 using Sepa.Models;
 
 namespace Sepa.Controllers
@@ -20,23 +21,34 @@ namespace Sepa.Controllers
         public ActionResult Index()
         {
 
-            var inv = db.Invoices.Include(w => w.Invoice_ID).Where(w => w.Invoice_ID > 1);
+            //var inv = db.Invoices.Include(w => w.Invoice_ID).Where(w => w.Invoice_ID > 1);
+            var inv = from item in db.Invoices
 
-            // Create an instance of System.Xml.Serialization.XmlSerializer
-            XmlSerializer serializer = new XmlSerializer(inv.GetType());
-  
-            // Create an instance of System.IO.TextWriter 
-            // to save the serialized object to disk
-            TextWriter textWriter = new StreamWriter("C:\\Projects\\invoice.xml");
+                       where item.Invoice_ID < 10800
+                       orderby item.Vendor_ID, item.Invoice_ID
+                       select item;
 
-            // Serialize the employee object
-            serializer.Serialize(textWriter, inv);
+            using (XmlWriter writer = XmlWriter.Create(@"c:\temp\test.xml"))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Invoices");
 
-            // Close the TextWriter
-            textWriter.Close();
+                foreach (Invoice invoice in inv)
+                {
+                    writer.WriteStartElement("Invoice");
+
+                    writer.WriteElementString("ID", invoice.Invoice_ID.ToString());
+                    writer.WriteElementString("Currency", invoice.Currency_Code);
+                    //writer.WriteElementString("Vendor", invoice.Vendors.Vendor_Name);
 
 
+                    writer.WriteEndElement();
+                }
 
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+           
             return View();
         }
     }

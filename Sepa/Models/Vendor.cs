@@ -7,6 +7,7 @@ using System.Web;
 
 namespace Sepa.Models
 {
+    [Serializable]
     //Country Code & Currency not used in First Iteration as Source DB uses String Type
     public enum Country
     {
