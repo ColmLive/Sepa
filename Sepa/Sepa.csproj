@@ -157,8 +157,8 @@
     <Compile Include="Controllers\InvoiceEditController.cs" />
     <Compile Include="Controllers\InvoicesController.cs" />
     <Compile Include="Controllers\InvoiceSearchController.cs" />
-    <Compile Include="Controllers\InvoiceUpdateController.cs" />
-    <Compile Include="Controllers\PaymentXMLController.cs" />
+    <Compile Include="Controllers\XMLFileController.cs" />
+    <Compile Include="Controllers\XMLListController.cs" />
     <Compile Include="Controllers\VendorsController.cs" />
     <Compile Include="Controllers\VendorUpdateController.cs" />
     <Compile Include="DAL\SepaContext.cs" />
@@ -254,9 +254,9 @@
     <Content Include="Views\Invoices\Details.cshtml" />
     <Content Include="Views\Invoices\Edit.cshtml" />
     <Content Include="Views\Invoices\Index.cshtml" />
-    <Content Include="Views\InvoiceUpdate\Index.cshtml" />
+    <Content Include="Views\XMLFile\Index.cshtml" />
     <Content Include="Views\InvoiceEdit\Index.cshtml" />
-    <Content Include="Views\PaymentXML\Index.cshtml" />
+    <Content Include="Views\XMLList\Index.cshtml" />
     <Content Include="Views\InvoiceSearch\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

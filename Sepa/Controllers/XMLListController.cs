@@ -9,7 +9,7 @@ using System.IO;
 
 namespace Sepa.Controllers
 {
-    public class PaymentXMLController : Controller
+    public class XMLListController : Controller
     {
         public SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
@@ -17,6 +17,7 @@ namespace Sepa.Controllers
         {
 
             var data = from b in db.Invoices
+                       where b.StatusCode == Status.SEPA
                        group b by b.Vendor_ID into g
                        select new Group<string, Invoice> { Key = g.Key.ToString(), Values = g };
 

@@ -11,6 +11,8 @@ namespace Sepa.Controllers
     {
         public SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
+
+        [HttpGet]
         public ActionResult Index()
         {
 

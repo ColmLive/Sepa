@@ -14,7 +14,7 @@ using Sepa.Models;
 
 namespace Sepa.Controllers
 {
-    public class InvoiceUpdateController : Controller
+    public class XMLFileController : Controller
     {
         private SepaContext db = new SepaContext();
         // GET: InvoiceUpdate
@@ -24,8 +24,8 @@ namespace Sepa.Controllers
             //var inv = db.Invoices.Include(w => w.Invoice_ID).Where(w => w.Invoice_ID > 1);
             var inv = from item in db.Invoices
 
-                       where item.Invoice_ID < 10800
-                       orderby item.Vendor_ID, item.Invoice_ID
+                      where item.StatusCode == Status.SEPA
+                      orderby item.Vendor_ID, item.Invoice_ID
                        select item;
 
             using (XmlWriter writer = XmlWriter.Create(@"c:\temp\test.xml"))

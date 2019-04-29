@@ -18,29 +18,31 @@
 		@for (int i = 0; i < Model.Count; i++)
 
 		{
-			<tr>
-				<td>
-					@Html.Hidden("Invoices.Index", (@i))
-					@Html.TextBox("Invoices[" + @i + "].Invoice_ID",
-					Model[i].Invoice_ID, new {@readonly="readonly"})
-				</td>
+		<tr>
+			<td>
+				@Html.Hidden("Invoices.Index", (@i))
+				@Html.TextBox("Invoices[" + @i + "].Invoice_ID",
+				Model[i].Invoice_ID, new {@readonly="readonly"})
+			</td>
 
-				<td>
-					@Html.TextBox("Invoices[" + @i + "].Vendor_ID",
-					Model[i].Vendor_ID)
-				</td>
+			<td>
+				@Html.TextBox("Invoices[" + @i + "].Vendor_ID",
+				Model[i].Vendor_ID)
+			</td>
 
-				<td>
-					@Html.TextBox("Invoices[" + @i + "].Posting_Desc",
-					Model[i].Posting_Desc)
-				</td>
+			<td>
+				@Html.TextBox("Invoices[" + @i + "].Posting_Desc",
+				Model[i].Posting_Desc)
+			</td>
 
-				<td>
-					@Html.TextBox("Invoices[" + @i + "].StatusCode",
-					Model[i].StatusCode)
-				</td>
+			<td>
+				@Html.TextBox("Invoices[" + @i + "].StatusCode",
+				Model[i].StatusCode)
+			</td>
 
-			</tr>
+			
+
+		</tr>
 
 		}
 

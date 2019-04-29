@@ -28,10 +28,10 @@ namespace Sepa.Models
     }
     public enum Status
     {
-        [Display(Name = "Entered")]             A,
-        [Display(Name = "SEPA")]                B,
-        [Display(Name = "Posted")]              C,
-        [Display(Name = "Completed")]           X
+        [Display(Name = "Entered")]             Entered,
+        [Display(Name = "SEPA")]                SEPA,
+        [Display(Name = "Posted")]              Posted,
+        [Display(Name = "Completed")]           Completed
     }
 
 
