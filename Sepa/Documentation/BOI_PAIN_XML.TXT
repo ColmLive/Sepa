@@ -1,0 +1,32 @@
+<?xml version=”1.0” encoding=”UTF-8” ?>
+<Document xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xmlns=”urn:iso:std:iso:20022:tech:xsd:pain.002.001.03”>
+<CstmrPmtStsRpt>
+<GrpHdr><MsgId>MSGIDBOIPain002</MsgId>
+<CreDtTm>2013-09-03T20:49:00</CreDtTm>
+<DbtrAgt><FinInstnId><BIC>BOFIIE2D</BIC></FinInstnId></DbtrAgt>
+</GrpHdr>
+<OrgnlGrpInfAndSts><OrgnlMsgId>MRBLOGS090301</OrgnlMsgId>
+<OrgnlMsgNmId>PAIN.001.001.03</OrgnlMsgNmId>
+</OrgnlGrpInfAndSts>
+<OrgnlPmtInfAndSts><OrgnlPmtInfId>STAFF EXPENSES 001</OrgnlPmtInfId>
+<TxInfAndSts>
+<StsId>BOFIIE2DXXX</StsId>
+<OrgnlEndToEndId>5678090300031</OrgnlEndToEndId>
+<TxSts>RJCT</TxSts>
+<StsRsnInf><Orgtr><Id>
+<OrgId><BICOrBEI>BOFIIE2DXXX</BICOrBEI></OrgId></Id></Orgtr>
+<Rsn> <Cd>AC01</Cd> </Rsn></StsRsnInf>
+<OrgnlTxRef><Amt><InstdAmt Ccy=”EUR”>16.44</InstdAmt></Amt>
+<ReqdExctnDt>2013-09-03</ReqdExctnDt>
+<PmtTpInf><SvcLvl><Cd>SEPA</Cd></SvcLvl></PmtTpInf>
+<RmtInf> <Ustrd>POSTAGE EXPENSE</Ustrd></RmtInf>
+<Dbtr><Nm>MR BLOGGS</Nm></Dbtr>
+<DbtrAcct><Id><IBAN>IE75BOFI90377959996017</IBAN></Id></DbtrAcct>
+<DbtrAgt><FinInstnId><BIC>BOFIIE2D</BIC></FinInstnId> </DbtrAgt>
+<CdtrAgt><FinInstnId><BIC>BOFIIE2D</BIC></FinInstnId></CdtrAgt>
+<Cdtr><Nm>Scott, Tiger</Nm></Cdtr>
+<CdtrAcct><Id><IBAN>IE82BOFI90393929352659</IBAN></Id></CdtrAcct>
+</OrgnlTxRef>
+</TxInfAndSts>
+</OrgnlPmtInfAndSts>
+</CstmrPmtStsRpt></Document>
