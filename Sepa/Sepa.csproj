@@ -197,6 +197,18 @@
     <Compile Include="Migrations\201903271348022_SetStatusCodeToStringonInvoiceClass.Designer.cs">
       <DependentUpon>201903271348022_SetStatusCodeToStringonInvoiceClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904300623474_AddInvoice_ValueColumToInvoiceTable.cs" />
+    <Compile Include="Migrations\201904300623474_AddInvoice_ValueColumToInvoiceTable.Designer.cs">
+      <DependentUpon>201904300623474_AddInvoice_ValueColumToInvoiceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904300626391_AddInvoice_ValueColumToInvoiceTable1.cs" />
+    <Compile Include="Migrations\201904300626391_AddInvoice_ValueColumToInvoiceTable1.Designer.cs">
+      <DependentUpon>201904300626391_AddInvoice_ValueColumToInvoiceTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904300706594_AddInvoice_ValueColumToInvoiceTable2.cs" />
+    <Compile Include="Migrations\201904300706594_AddInvoice_ValueColumToInvoiceTable2.Designer.cs">
+      <DependentUpon>201904300706594_AddInvoice_ValueColumToInvoiceTable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -299,6 +311,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903271348022_SetStatusCodeToStringonInvoiceClass.resx">
       <DependentUpon>201903271348022_SetStatusCodeToStringonInvoiceClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904300623474_AddInvoice_ValueColumToInvoiceTable.resx">
+      <DependentUpon>201904300623474_AddInvoice_ValueColumToInvoiceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904300626391_AddInvoice_ValueColumToInvoiceTable1.resx">
+      <DependentUpon>201904300626391_AddInvoice_ValueColumToInvoiceTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904300706594_AddInvoice_ValueColumToInvoiceTable2.resx">
+      <DependentUpon>201904300706594_AddInvoice_ValueColumToInvoiceTable2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -19,6 +19,7 @@ namespace Sepa.Models
         public string Currency_Code { get; set; }
         public double Discount { get; set; }
         public DateTime? Due_Date { get; set; }
+        public double? Invoice_Value { get; set; }
         public DateTime? Posting_Date { get; set; }
         public string Posting_Desc { get; set; }
         public Status StatusCode { get; set; }
