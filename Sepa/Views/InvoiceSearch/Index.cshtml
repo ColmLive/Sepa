@@ -17,8 +17,8 @@
 		<p>
 
 			<b>Search by:</b>
-			@Html.RadioButton("Search by", "Name") <text>Name</text>
-			@Html.RadioButton("Search by", "Status", true) <text>Status</text>
+			@Html.RadioButton("Search by", "Name", true) <text>Name</text>
+			@Html.RadioButton("Search by", "Status") <text>Status</text>
 			<br />
 			@Html.TextBox("Search")<input type="submit" value="Search" />
 		</p>
@@ -37,8 +37,8 @@
 			</td>
 
 			<td>
-				@Html.TextBox("Invoices[" + @i + "].Vendor_ID",
-				Model[i].Vendor_ID)
+				@Html.TextBox("Invoices[" + @i + "].Posting_Date",
+				Model[i].Posting_Date)
 			</td>
 
 			<td>

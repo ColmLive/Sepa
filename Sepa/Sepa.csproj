@@ -209,6 +209,22 @@
     <Compile Include="Migrations\201904300706594_AddInvoice_ValueColumToInvoiceTable2.Designer.cs">
       <DependentUpon>201904300706594_AddInvoice_ValueColumToInvoiceTable2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904301243097_AddIBANNumbertoVendorsTable.cs" />
+    <Compile Include="Migrations\201904301243097_AddIBANNumbertoVendorsTable.Designer.cs">
+      <DependentUpon>201904301243097_AddIBANNumbertoVendorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301304316_AmendIBANNumbertoNullableinVendorsTable.cs" />
+    <Compile Include="Migrations\201904301304316_AmendIBANNumbertoNullableinVendorsTable.Designer.cs">
+      <DependentUpon>201904301304316_AmendIBANNumbertoNullableinVendorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301316596_AmendIBANNumbertoNullableinVendorsTable1.cs" />
+    <Compile Include="Migrations\201904301316596_AmendIBANNumbertoNullableinVendorsTable1.Designer.cs">
+      <DependentUpon>201904301316596_AmendIBANNumbertoNullableinVendorsTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904301327274_AmendIBANNumbertoNullableinVendorsTable2.cs" />
+    <Compile Include="Migrations\201904301327274_AmendIBANNumbertoNullableinVendorsTable2.Designer.cs">
+      <DependentUpon>201904301327274_AmendIBANNumbertoNullableinVendorsTable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -320,6 +336,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904300706594_AddInvoice_ValueColumToInvoiceTable2.resx">
       <DependentUpon>201904300706594_AddInvoice_ValueColumToInvoiceTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301243097_AddIBANNumbertoVendorsTable.resx">
+      <DependentUpon>201904301243097_AddIBANNumbertoVendorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301304316_AmendIBANNumbertoNullableinVendorsTable.resx">
+      <DependentUpon>201904301304316_AmendIBANNumbertoNullableinVendorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301316596_AmendIBANNumbertoNullableinVendorsTable1.resx">
+      <DependentUpon>201904301316596_AmendIBANNumbertoNullableinVendorsTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904301327274_AmendIBANNumbertoNullableinVendorsTable2.resx">
+      <DependentUpon>201904301327274_AmendIBANNumbertoNullableinVendorsTable2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

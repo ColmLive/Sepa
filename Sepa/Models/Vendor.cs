@@ -65,7 +65,9 @@ namespace Sepa.Models
         [Display(Name = "Email")]
         [EmailAddress]
         public string Vendor_Email { get; set; }
-
+                
+        //[StringLength(20, MinimumLength = 1)]
+        public string Vendor_IBAN { get; set; }
 
         [Display(Name = "Phone Number")]
         [Phone]
@@ -76,7 +78,7 @@ namespace Sepa.Models
         //public Nullable<int> Invoice_ID { get; set; }
 
         // Constructor
-        public Vendor(int Vendor_ID, string Vendor_Name, string Vendor_Address, string Vendor_Address2, string Vendor_City, string Vendor_Country, string Vendor_Currency, string Vendor_Email, string Vendor_Phone)
+        public Vendor(int Vendor_ID, string Vendor_Name, string Vendor_Address, string Vendor_Address2, string Vendor_City, string Vendor_Country, string Vendor_Currency, string Vendor_Email, string Vendor_IBAN, string Vendor_Phone)
         {
             this.Vendor_ID = Vendor_ID;
             this.Vendor_Name = Vendor_Name;
@@ -86,6 +88,7 @@ namespace Sepa.Models
             this.Vendor_Country = Vendor_Country;
             this.Vendor_Currency = Vendor_Currency;
             this.Vendor_Email = Vendor_Email;
+            this.Vendor_IBAN = Vendor_IBAN;
             this.Vendor_Phone = Vendor_Phone;
         }
 

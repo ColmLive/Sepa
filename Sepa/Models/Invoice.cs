@@ -30,11 +30,12 @@ namespace Sepa.Models
         public virtual Vendor Vendors { get; set; }
 
         // Constructor
-        public Invoice(string Currency, double Discount, DateTime? Due_Date, DateTime? Posting_Date, string Posting_Desc, Status StatusCode, int Vendor_ID,  string Vendor_InVNo)
+        public Invoice(string Currency, double Discount, DateTime? Due_Date, DateTime? Posting_Date, double Invoice_Value, string Posting_Desc, Status StatusCode, int Vendor_ID,  string Vendor_InVNo)
         {
             this.Currency_Code = Currency_Code;
             this.Discount = Discount;
             this.Due_Date = Due_Date;
+            this.Invoice_Value = Invoice_Value;
             this.Posting_Date = Posting_Date;
             this.Posting_Desc = Posting_Desc;
             this.StatusCode = StatusCode;
