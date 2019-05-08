@@ -36,11 +36,14 @@
 			</td>
 
 			<td>
+				@Html.TextBox("Invoices[" + @i + "].Invoice_Value",
+				Model[i].Invoice_Value)
+			</td>
+			<td>
 				@Html.TextBox("Invoices[" + @i + "].StatusCode",
 				Model[i].StatusCode)
 			</td>
 
-			
 
 		</tr>
 

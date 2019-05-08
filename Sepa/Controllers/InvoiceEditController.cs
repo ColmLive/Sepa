@@ -18,7 +18,7 @@ namespace Sepa.Controllers
 
             var data = from item in db.Invoices
 
-                       where item.Invoice_ID < 10800
+                       where item.StatusCode == Status.Entered
                        orderby item.Vendor_ID, item.Invoice_ID
 
                        select item;
@@ -43,8 +43,9 @@ namespace Sepa.Controllers
 
                 invoice.Posting_Desc = inv.Posting_Desc;
 
-                invoice.StatusCode = inv.StatusCode;
+                invoice.Invoice_Value = inv.Invoice_Value;
 
+                invoice.StatusCode = inv.StatusCode;
 
             }
             db.SaveChanges();
