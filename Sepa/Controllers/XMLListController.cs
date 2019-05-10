@@ -24,34 +24,6 @@ namespace Sepa.Controllers
             return View(data.ToList());
         }
 
-        /*
-        [HttpPost]
-
-        public ActionResult Index(List<Invoice> invoices)
-
-        {
-
-
-            foreach (Invoice inv in invoices)
-            {
-
-                Invoice invoice = db.Invoices.Find(inv.Invoice_ID);
-
-                invoice.Posting_Date = inv.Posting_Date;
-
-                invoice.Posting_Desc = inv.Posting_Desc;
-
-                invoice.StatusCode = inv.StatusCode;
-
-
-            }
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
-            //return View();
-
         }
-        */
-    }
 }
 

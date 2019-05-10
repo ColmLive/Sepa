@@ -39,7 +39,7 @@ namespace Sepa.Controllers
 
                 Invoice invoice = db.Invoices.Find(inv.Invoice_ID);
 
-                invoice.Posting_Date = inv.Posting_Date;
+                invoice.Due_Date = inv.Due_Date;
 
                 invoice.Posting_Desc = inv.Posting_Desc;
 
