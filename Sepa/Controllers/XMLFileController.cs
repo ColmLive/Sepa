@@ -110,11 +110,12 @@ namespace Sepa.Controllers
                     //*** Part 3 - Generate a single payment foe each Payee ***//
                     var query3 = db.Invoices.GroupBy(g => new
                     {
-                        g.Vendors.Vendor_Name
+                        g.StatusCode,g.Vendors.Vendor_Name
                     })
                      .Select(group => new
                      {
-                         StatusCode = group.Key.Vendor_Name,
+                         StatusCode = group.Key.StatusCode,
+                         VendorCode = group.Key.Vendor_Name,
                          TotalAmount = group.Sum(a => a.Invoice_Value),
                          TotalCount = group.Count()
                      });
@@ -128,11 +129,11 @@ namespace Sepa.Controllers
 
                         //*** Select only SEPA Status ***//
 
-                        foreach (var item in query3)
+                        foreach (var item in query3.Where(a => a.StatusCode == Status.SEPA))
                         {
-                            writer.WriteElementString("PIBTotals", item.TotalAmount.ToString());
-                            writer.WriteElementString("PIBTotals", item.TotalCount.ToString());
-                            writer.WriteElementString("PIBTotals", item.StatusCode.ToString());
+                            writer.WriteElementString("DtrAmount", item.TotalAmount.ToString());
+                            writer.WriteElementString("DtrCount", item.TotalCount.ToString());
+                            writer.WriteElementString("DtrName", item.VendorCode.ToString());
 
                         }
                         writer.WriteEndElement();
