@@ -19,15 +19,26 @@ namespace Sepa.Controllers
         // GET: VendorUpdate
         public ActionResult Index()
         {
-       
+
             using (SepaContext dBEntities = new SepaContext())
             {
-                SqlCommand cmd = new SqlCommand("PopulateVendors", conn)
+                SqlConnection conn = new SqlConnection());
+
+
+                //SqlConnection("Server=(SQLEXPRESS);DataBase=SEPA;Integrated Security=SSPI");
+                //SqlConnection("Server=(localdb);DataBase=SEPA;Integrated Security=SSPI");
+
+
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("PopulateVendors", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
                 //dBEntities.Database.ExecuteSqlCommand("insert into Vendors values(998,'vendor tes2','Add6', 'New York', 'USA', 'USD/PL', 'v3@test.com', '0015552316777');");
                 //                var query = dBEntities.Vendors.SqlQuery("select * from Vendors").ToList<Table1>();
                 //                var query2 = dBEntities.Database.SqlQuery<Table1>("select * from Table1").ToList<Table1>();
                 //               var query3 = dBEntities.Database.SqlQuery<tablevm>("select t1.id, t1.product, SUM(t1.price) as price from Table1 as t1 group by t1.id, t1.product").ToList<tablevm>();
-         
+
             }
 
             return View();
@@ -35,4 +46,4 @@ namespace Sepa.Controllers
         }
     }
 }
- 
+
