@@ -20,11 +20,12 @@ namespace Sepa.Controllers
         public ActionResult Index()
         {
 
-            using (SepaContext dBEntities = new SepaContext())
+            //using (SepaContext dBEntities = new SepaContext())
+            using (var conn = new SqlConnection(db.Database.Connection.ConnectionString))
             {
-                SqlConnection conn = new SqlConnection());
+                //SqlConnection conn = new SqlConnection());
 
-
+                //
                 //SqlConnection("Server=(SQLEXPRESS);DataBase=SEPA;Integrated Security=SSPI");
                 //SqlConnection("Server=(localdb);DataBase=SEPA;Integrated Security=SSPI");
 
@@ -33,7 +34,11 @@ namespace Sepa.Controllers
 
                 SqlCommand cmd = new SqlCommand("PopulateVendors", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteNonQuery();
 
+                SqlCommand cmd2 = new SqlCommand("PopulateInvoices", conn);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.ExecuteNonQuery();
                 //dBEntities.Database.ExecuteSqlCommand("insert into Vendors values(998,'vendor tes2','Add6', 'New York', 'USA', 'USD/PL', 'v3@test.com', '0015552316777');");
                 //                var query = dBEntities.Vendors.SqlQuery("select * from Vendors").ToList<Table1>();
                 //                var query2 = dBEntities.Database.SqlQuery<Table1>("select * from Table1").ToList<Table1>();
