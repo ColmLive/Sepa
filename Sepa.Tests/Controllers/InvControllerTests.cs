@@ -33,7 +33,8 @@ namespace Sepa.Controllers.Tests
 
             //Assert
             //Assert.IsFalse(isValid);
-            Assert.IsNull(invoice);
+            //Assert.IsNull(invoice);
+            Assert.IsNull(invoice.Invoice_Value);
         }
 
         [TestMethod]
@@ -80,9 +81,10 @@ namespace Sepa.Controllers.Tests
 
             // Act
             var result = controller.Details(999) as ViewResult;
+           
 
             // Assert
-            Assert.AreEqual("NotFound", result.ViewName);
+            Assert.AreEqual("NotFound", result.ViewBag);
         }
         [TestMethod()]
         public void IndexTest()
