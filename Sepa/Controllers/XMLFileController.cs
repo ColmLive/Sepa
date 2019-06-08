@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web.Mvc;
 using System.Xml;
+using System.Collections.Generic;
 
 namespace Sepa.Controllers
 {
@@ -13,15 +14,16 @@ namespace Sepa.Controllers
         // GET: InvoiceUpdate
         public ActionResult Index()
         {
-
+            //***                      Phase 1                          ***//
             //*** Generate Transaction File to post to Financial System ***//
+            //*** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ***//
             var inv = from item in db.Invoices
 
                       where item.StatusCode == Status.SEPA
                       orderby item.Vendor_ID, item.Invoice_ID
                       select item;
 
-            using (XmlWriter writer = XmlWriter.Create(@"c:\temp\test.xml"))
+            using (XmlWriter writer = XmlWriter.Create(@"c:\temp\invoice.xml"))
             {
                 writer.WriteStartDocument();
 
@@ -40,12 +42,13 @@ namespace Sepa.Controllers
                     writer.WriteElementString("Currency", invoice.Currency_Code);
                     writer.WriteEndElement();
                 }
-
                 writer.WriteEndElement();
                 writer.WriteEndDocument();
             }
 
+            //***                      Phase 2                         ***//
             //*** Generate Payment File to post to SEPA System ***//
+            //*** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ***//
 
             //*** Part 1 - Generate Summary Totals for XML File ***//
             var query = db.Invoices.GroupBy(g => new
@@ -61,7 +64,7 @@ namespace Sepa.Controllers
 
             //*** Write SEPA Totals to XML File ***//
 
-            using (XmlWriter writer = XmlWriter.Create(@"c:\temp\pay.xml"))
+            using (XmlWriter writer = XmlWriter.Create(@"c:\temp\payment.xml"))
             {
                 writer.WriteStartDocument();
                 writer.WriteStartElement("Payments");
@@ -110,12 +113,13 @@ namespace Sepa.Controllers
                     //*** Part 3 - Generate a single payment foe each Payee ***//
                     var query3 = db.Invoices.GroupBy(g => new
                     {
-                        g.StatusCode,g.Vendors.Vendor_Name
+                        g.StatusCode,g.Vendors.Vendor_Name,g.Vendors.Vendor_IBAN
                     })
                      .Select(group => new
                      {
                          StatusCode = group.Key.StatusCode,
                          VendorCode = group.Key.Vendor_Name,
+                         VendorIBAN = group.Key.Vendor_IBAN,
                          TotalAmount = group.Sum(a => a.Invoice_Value),
                          TotalCount = group.Count()
                      });
@@ -134,6 +138,7 @@ namespace Sepa.Controllers
                             writer.WriteElementString("DtrAmount", item.TotalAmount.ToString());
                             writer.WriteElementString("DtrCount", item.TotalCount.ToString());
                             writer.WriteElementString("DtrName", item.VendorCode.ToString());
+                            writer.WriteElementString("DtrIBAN", item.VendorIBAN.ToString());
 
                         }
                         writer.WriteEndElement();
@@ -141,12 +146,31 @@ namespace Sepa.Controllers
 
                         writer.WriteEndDocument();
                     }
+                    //***                      Phase       3                    ***//
+                    //***           Update Invoice Status to Posted             ***//
+                    //*** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ***//
+
+
+                    var inv1 = from item in db.Invoices
+                               where item.StatusCode == Status.SEPA
+                               orderby item.Vendor_ID, item.Invoice_ID
+                               select item;
+                    {
+                        foreach (Invoice invoice in inv1)
+                        {
+                            invoice.StatusCode = Status.Posted;
+                        }
+                        db.SaveChanges();
+                    }
 
                     return View();
                 }
             }
         }
+        
+        }
+
     }
-}
+
 
 

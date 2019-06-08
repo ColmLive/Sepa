@@ -40,7 +40,7 @@ namespace Sepa.Controllers
                 return View(db.Invoices.Where(x => x.StatusCode == (Status.Completed)).ToList());
             }
             else
-            { return View(db.Invoices.Where(x => x.Vendors.Vendor_Name.StartsWith(search)).ToList()); }
+            { return View(db.Invoices.Where(x => x.Vendors.Vendor_Name.Contains(search)).ToList()); }
         }
  
         [HttpPost]

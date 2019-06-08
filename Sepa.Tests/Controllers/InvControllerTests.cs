@@ -21,7 +21,7 @@ namespace Sepa.Controllers.Tests
         {
 
             //Arrange
-            Invoice invoice = new Invoice()
+            var invoice = new Invoice()
             {
                 Invoice_ID = 1,
                 Invoice_Value = null,
@@ -33,7 +33,7 @@ namespace Sepa.Controllers.Tests
 
             //Assert
             //Assert.IsFalse(isValid);
-            Assert.Fail();
+            Assert.IsNull(invoice);
         }
 
         [TestMethod]
@@ -41,7 +41,7 @@ namespace Sepa.Controllers.Tests
         {
 
             //Arrange
-            Invoice invoice = new Invoice()
+            var invoice = new Invoice()
             {
                 Invoice_ID = 1,
                 Invoice_Value = 100.00,
@@ -54,6 +54,7 @@ namespace Sepa.Controllers.Tests
             //Assert
             //Assert.IsTrue(isValid);
             Assert.IsNotNull(invoice);
+            
         }
 
         [TestMethod]
