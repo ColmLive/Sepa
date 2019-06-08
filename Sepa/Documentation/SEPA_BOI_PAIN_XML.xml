@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>MRBLOGS090301</MsgId>
+      <CreDtTm>2013-08-28T17:12:44</CreDtTm>
+      <NbOfTxs>5</NbOfTxs>
+      <CtrlSum>43236.93</CtrlSum>
+      <InitgPty>
+        <Id>
+          <PrvtId>
+            <Othr>
+              <Id>200001</Id>
+            </Othr>
+          </PrvtId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>STAFF EXPENSES 001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>8730.48</CtrlSum>
+      <ReqdExctnDt>2013-09-03</ReqdExctnDt>
+      <Dbtr>
+        <Nm>MR BLOGGS</Nm>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>IE75BOFI90377959996017</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BIC>BOFIIE2DXXX</BIC>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId>5678090300031</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">16.44</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BOFIIE2DXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Scott, Tiger</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IE82BOFI90393929352659</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>POSTAGE EXPENSE</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId>5678090300032</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">8014.04</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BOFIIE2DXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>BOI Customer</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IE19BOFI90529930903788</IBAN>
+          </Id>
+        </CdtrAcct>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId>5678090300033</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">700</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BOFIIE2DXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>BOI Customer</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IE59BOFI90565164751321</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>SALES TRAVEL USA</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+    <PmtInf>
+      <PmtInfId>WAGES 012</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>2</NbOfTxs>
+      <CtrlSum>4506.45</CtrlSum>
+      <ReqdExctnDt>2013-09-04</ReqdExctnDt>
+      <Dbtr>
+        <Nm>MR BLOGGS</Nm>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>IE11BOFI90570714221998</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BIC>BOFIIE2DXXX</BIC>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId>432109030001</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">2006.45</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BOFIIE2DXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>Joe BLOGGS</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IE31BOFI90573146957000</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>WAGES - A N OTHER</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId>432109030002</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">2500</InstdAmt>
+        </Amt>
+        <CdtrAgt>
+          <FinInstnId>
+            <BIC>BOFIIE2DXXX</BIC>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>John Smith</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>IE22BOFI90573146641815</IBAN>
+          </Id>
+        </CdtrAcct>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
